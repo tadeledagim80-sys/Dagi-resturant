@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-gold: #d4af37;
+  --color-gold-light: #f3e5ab;
+  --color-gold-dark: #aa7c11;
+  
+  --color-dagi-red: #c51c24;
+  --color-dagi-red-dark: #801015;
+  --color-dagi-red-light: #ef4444;
+
+  --color-dagi-black: #0a0a0a;
+  --color-dagi-gray-dark: #121212;
+  --color-dagi-gray-light: #1f1f1f;
+  --color-dagi-gray-muted: #8e8e93;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dagi-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dagi-red-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Base style resets */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-dagi-black);
+  color: #f5f5f5;
+  font-family: var(--font-sans);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Dynamic pulse for gold glow */
+@keyframes gold-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4), 0 0 2px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 5px rgba(212, 175, 55, 0.4);
+  }
+}
+
+.gold-glow-text {
+  animation: gold-pulse 3s infinite;
+}
+
+/* Gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, #f3e5ab, #d4af37, #aa7c11) 1;
+}

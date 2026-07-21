@@ -1,0 +1,6 @@
+{
+  "name": "DAGI Restaurant",
+  "description": "A premium, elegant, and fully responsive restaurant website with a sophisticated red, black, and gold theme. Includes a interactive menu, shopping cart, checkout system, live Google Maps and geolocation tracking, and a seamless booking and contact interface.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
